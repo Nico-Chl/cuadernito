@@ -308,3 +308,121 @@ button.danger {
   clip: rect(0 0 0 0);
   white-space: nowrap;
 }
+
+/* --- Conjugaison --- */
+.suggestions {
+  list-style: none;
+  margin: -4px 0 16px;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+button.suggestion {
+  min-height: 40px;
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+  font-weight: 500;
+}
+
+.verb-title {
+  font-size: 1.6rem;
+  margin: 8px 0 12px;
+}
+
+.models {
+  margin-bottom: 12px;
+}
+
+.impersonal {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin: 0 0 8px;
+}
+
+.impersonal div {
+  padding: 10px 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow-wrap: anywhere;
+}
+
+.impersonal dt {
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.impersonal dd {
+  margin: 0;
+  font-weight: 600;
+}
+
+.mood h3 {
+  margin: 24px 0 8px;
+  font-size: 1.15rem;
+}
+
+.tense-grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+}
+
+.tense {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 10px 14px 6px;
+}
+
+.tense h4 {
+  margin: 0 0 6px;
+  font-size: 0.95rem;
+  color: var(--accent);
+}
+
+.tense table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tense th {
+  text-align: left;
+  font-weight: 400;
+  color: var(--muted);
+  font-size: 0.85rem;
+  padding: 3px 8px 3px 0;
+  width: 42%;
+}
+
+.tense td {
+  padding: 3px 0;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.tense td.absent {
+  color: var(--muted);
+  font-weight: 400;
+}
+
+details.more {
+  margin-top: 12px;
+}
+
+details.more summary {
+  cursor: pointer;
+  color: var(--accent);
+  font-weight: 600;
+  min-height: 36px;
+  display: flex;
+  align-items: center;
+}
+
+details.more .tense-grid {
+  margin-top: 8px;
+}

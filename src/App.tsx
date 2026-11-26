@@ -23,6 +23,7 @@ function Shell() {
           <Route path="/vocab" element={<Vocab />} />
           <Route path="/review" element={<Review />} />
           <Route path="/conjugation" element={<Conjugation />} />
+          <Route path="/conjugation/:verb" element={<Conjugation />} />
           <Route path="/settings" element={<Settings />} />
         </Routes>
       </main>

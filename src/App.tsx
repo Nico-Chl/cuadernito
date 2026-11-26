@@ -2,6 +2,7 @@ import { HashRouter, NavLink, Route, Routes } from 'react-router-dom'
 import { I18nProvider, useI18n, type MessageKey } from './i18n'
 import Home from './pages/Home'
 import Vocab from './pages/Vocab'
+import Review from './pages/Review'
 import Conjugation from './pages/Conjugation'
 import Settings from './pages/Settings'
 
@@ -20,6 +21,7 @@ function Shell() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/vocab" element={<Vocab />} />
+          <Route path="/review" element={<Review />} />
           <Route path="/conjugation" element={<Conjugation />} />
           <Route path="/settings" element={<Settings />} />
         </Routes>

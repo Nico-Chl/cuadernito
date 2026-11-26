@@ -5,6 +5,16 @@ import { nextState } from './srs'
 /** Langue étudiée. Fixée à l'espagnol pour la V1 (le schéma est prêt pour d'autres). */
 export const STUDY_LANG: LangCode = 'es'
 
+/** Mots du vocabulaire qui sont des verbes à l'infinitif connus du moteur (pour les exercices de conjugaison). */
+export async function loadMyVerbs(
+  engine: { hasVerb(v: string): boolean },
+  lang: LangCode = STUDY_LANG,
+): Promise<string[]> {
+  const words = await db.words.where('lang').equals(lang).toArray()
+  const verbs = words.map((w) => w.term.trim().toLowerCase()).filter((v) => engine.hasVerb(v))
+  return [...new Set(verbs)]
+}
+
 type NewCard = Omit<Card, 'id'>
 
 const key = (s: string) => s.trim().toLowerCase()

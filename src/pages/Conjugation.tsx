@@ -44,7 +44,12 @@ export default function Conjugation() {
 
   return (
     <>
-      <h1>{t('conj.title')}</h1>
+      <div className="row spread">
+        <h1>{t('conj.title')}</h1>
+        <Link to="/conjugation/quiz" className="button">
+          {t('conj.practice')}
+        </Link>
+      </div>
 
       <form onSubmit={onSubmit} role="search">
         <label htmlFor="verb-search" className="sr-only">

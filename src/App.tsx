@@ -4,6 +4,7 @@ import Home from './pages/Home'
 import Vocab from './pages/Vocab'
 import Review from './pages/Review'
 import Conjugation from './pages/Conjugation'
+import ConjQuiz from './pages/ConjQuiz'
 import Settings from './pages/Settings'
 
 const TABS: { to: string; key: MessageKey; icon: string }[] = [
@@ -23,6 +24,7 @@ function Shell() {
           <Route path="/vocab" element={<Vocab />} />
           <Route path="/review" element={<Review />} />
           <Route path="/conjugation" element={<Conjugation />} />
+          <Route path="/conjugation/quiz" element={<ConjQuiz />} />
           <Route path="/conjugation/:verb" element={<Conjugation />} />
           <Route path="/settings" element={<Settings />} />
         </Routes>

@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import InstallCard from '../components/InstallCard'
 import { useI18n } from '../i18n'
 
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
     <>
       <h1>{t('home.title')}</h1>
       <p className="muted">{t('home.subtitle')}</p>
+      <InstallCard dismissible />
       <div className="cards">
         <Link to="/vocab" className="card">
           <h2>{t('home.vocab')}</h2>

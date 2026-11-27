@@ -1,5 +1,6 @@
 import { useRef, useState } from 'react'
 import { exportBackupToFile, importBackup } from '../backup'
+import InstallCard from '../components/InstallCard'
 import { UI_LANGS, useI18n, type UiLang } from '../i18n'
 
 export default function Settings() {
@@ -27,6 +28,10 @@ export default function Settings() {
   return (
     <>
       <h1>{t('settings.title')}</h1>
+
+      <div className="section">
+        <InstallCard />
+      </div>
 
       <section className="section">
         <label htmlFor="ui-lang">{t('settings.language')}</label>

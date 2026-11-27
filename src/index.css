@@ -522,3 +522,45 @@ button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
+
+/* --- Encart d'installation --- */
+.install-card {
+  margin: 16px 0;
+  padding: 16px;
+  background: var(--surface);
+  border: 1px solid var(--accent);
+  border-radius: 14px;
+}
+
+.install-card h2 {
+  margin-bottom: 6px;
+}
+
+.install-card h3 {
+  margin: 16px 0 4px;
+  font-size: 1rem;
+}
+
+.install-card .muted {
+  margin-bottom: 12px;
+}
+
+.install-card > button {
+  margin-right: 8px;
+}
+
+.install-steps {
+  margin: 4px 0 12px;
+  padding-left: 22px;
+}
+
+.install-steps li {
+  margin-bottom: 6px;
+}
+
+.inline-icon {
+  display: inline-block;
+  vertical-align: -3px;
+  margin-left: 4px;
+  color: var(--accent);
+}
